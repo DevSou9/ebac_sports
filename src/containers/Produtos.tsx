@@ -1,3 +1,4 @@
+import { useGetProdutosQuery } from '../service/api'
 import { Produto as ProdutoType } from '../App'
 import Produto from '../components/Produto'
 
@@ -16,6 +17,8 @@ const ProdutosComponent = ({
   adicionarAoCarrinho,
   favoritar
 }: Props) => {
+  const { data: produtosX, isLoading } = useGetProdutosQuery()
+
   const produtoEstaNosFavoritos = (produto: ProdutoType) => {
     const produtoId = produto.id
     const IdsDosFavoritos = favoritos.map((f) => f.id)
