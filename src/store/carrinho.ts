@@ -5,7 +5,7 @@ type carriongState = {
   itens: Produto[]
 }
 
-const initialState: carriongState = { itens: [] }
+export const initialState: carriongState = { itens: [] }
 
 const carrinhoSlice = createSlice({
   name: 'carrinho',

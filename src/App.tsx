@@ -15,16 +15,16 @@ export type Produto = {
 }
 
 function App() {
-  const [carrinho, setCarrinho] = useState<Produto[]>([])
+  // const [carrinho, setCarrinho] = useState<Produto[]>([])
   const [favoritos, setFavoritos] = useState<Produto[]>([])
 
-  function adicionarAoCarrinho(produto: Produto) {
-    if (carrinho.find((p) => p.id === produto.id)) {
-      alert('Item já adicionado')
-    } else {
-      setCarrinho([...carrinho, produto])
-    }
-  }
+  // function adicionarAoCarrinho(produto: Produto) {
+  //   if (carrinho.find((p) => p.id === produto.id)) {
+  //     alert('Item já adicionado')
+  //   } else {
+  //     setCarrinho([...carrinho, produto])
+  //   }
+  // }
 
   function favoritar(produto: Produto) {
     if (favoritos.find((p) => p.id === produto.id)) {
@@ -39,12 +39,12 @@ function App() {
     <Provider store={store}>
       <GlobalStyle />
       <div className="container">
-        <Header favoritos={favoritos} itensNoCarrinho={carrinho} />
+        <Header favoritos={favoritos} />
         <Produtos
           // produtos={produtos}
           favoritos={favoritos}
           favoritar={favoritar}
-          adicionarAoCarrinho={adicionarAoCarrinho}
+          // adicionarAoCarrinho={adicionarAoCarrinho}
         />
       </div>
     </Provider>
