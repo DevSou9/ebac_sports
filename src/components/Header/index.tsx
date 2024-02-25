@@ -6,12 +6,16 @@ import { Produto } from '../../App'
 import cesta from '../../assets/cesta.png'
 import { paraReal } from '../Produto'
 
-type Props = {
-  // itensNoCarrinho: Produto[]
-  favoritos: Produto[]
-}
+// type Props = {
+//   // itensNoCarrinho: Produto[]
+//   // favoritos: Produto[]
+// }
 
-const Header = ({ favoritos }: Props) => {
+const Header = () => {
+  const favoritos: Produto[] = useSelector(
+    (state: RootReducer) => state.favoritos.itens
+  )
+
   const itensNoCarrinho = useSelector(
     (state: RootReducer) => state.carrinho.itens
   )
