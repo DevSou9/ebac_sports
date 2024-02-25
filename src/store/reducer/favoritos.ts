@@ -17,5 +17,6 @@ const favoritosSlcie = createSlice({
     }
   }
 })
+
 export const { addFavorito } = favoritosSlcie.actions
 export default favoritosSlcie.reducer
