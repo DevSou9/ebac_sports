@@ -1,15 +1,9 @@
-import * as S from './styles'
 import { useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 import { Produto } from '../../App'
-
 import cesta from '../../assets/cesta.png'
 import { paraReal } from '../Produto'
-
-// type Props = {
-//   // itensNoCarrinho: Produto[]
-//   // favoritos: Produto[]
-// }
+import * as S from './styles'
 
 const Header = () => {
   const favoritos: Produto[] = useSelector(
